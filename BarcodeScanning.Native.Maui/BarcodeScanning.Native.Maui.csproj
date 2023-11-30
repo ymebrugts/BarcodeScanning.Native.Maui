@@ -12,8 +12,10 @@
 		<Description>Barcode scanning library for .NET MAUI</Description>
 		<PackageProjectUrl>https://github.com/afriscic/BarcodeScanning.Native.Maui</PackageProjectUrl>
 		<PackageTags>.NET MAUI android ios barcode-scanner</PackageTags>
+    <TargetFrameworkVersion>v14.0</TargetFrameworkVersion>
+    <AndroidMinVersion>v7.0</AndroidMinVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.1</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
@@ -28,10 +30,10 @@
 	
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
 		<PackageReference Include="Xamarin.Google.MLKit.BarcodeScanning" Version="117.2.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.Camera.View" Version="1.3.0" />
-		<PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.3.0" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.View" Version="1.3.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.3.0.1" />
 		
-		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
